@@ -17,7 +17,7 @@ workflow.add_node("writer",           writer_agent)
 
 workflow.set_entry_point("supervisor")
 workflow.add_conditional_edges("supervisor",route_from_supervisor,{
-        "researcher_tools": "researcher",
+        "researcher": "researcher",
         "fact_checker": "fact_checker",
         "writer": "writer",
         "__end__": END
